@@ -6,7 +6,7 @@ import tldextract
 import json
 import jsonlines
 
-class Scrawler:
+class Crawler:
     def __init__(self, base_url, allowed_paths=[], priorized_paths=[]):
         self.base_url = base_url
         self.allowed_paths = allowed_paths
@@ -57,7 +57,7 @@ class Scrawler:
             title = 'No title found'
         return title
     
-    def scrawl(self, max_nb_pages=50):
+    def crawl(self, max_nb_pages=50):
         ext = tldextract.extract(self.base_url)
         robot_path = f"{'https://' + ext.subdomain + '.' if ext.subdomain else ''}{ext.domain}.{ext.suffix}/robots.txt"
         self.allowed_paths.append(self.base_url)
@@ -82,8 +82,8 @@ class Scrawler:
                     writer.write(output)
     
 
-scrawler = Scrawler("https://web-scraping.dev/")
+crawler = Crawler("https://web-scraping.dev/")
 
 
 
-scrawler.scrawl(10)
+crawler.crawl(10)
