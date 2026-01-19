@@ -58,6 +58,7 @@ class Crawler:
         return title
     
     def crawl(self, max_nb_pages=50):
+        outputs=[]
         ext = tldextract.extract(self.base_url)
         robot_path = f"{'https://' + ext.subdomain + '.' if ext.subdomain else ''}{ext.domain}.{ext.suffix}/robots.txt"
         self.allowed_paths.append(self.base_url)
@@ -78,8 +79,11 @@ class Crawler:
                     "description": first_paragraph,
                     "links": links
                 }
-                with jsonlines.open("/home/ensai/Documents/Indexation/TpScrawler/output/products.jsonl", mode='w') as writer:
-                    writer.write(output)
+                outputs.append(output)
+        for o in outputs:
+            with jsonlines.open("/home/ensai/Documents/Indexation/TpScrawler/output/products.jsonl", mode='w') as writer:
+                 json.dump(o, writer)
+                 writer.write('\n')
     
 
 crawler = Crawler("https://web-scraping.dev/")
