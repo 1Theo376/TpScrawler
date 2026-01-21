@@ -119,16 +119,16 @@ class Crawler:
         List of unique internal absolute URLs extracted from the page.
     """
         links = []
-        base_netloc = urlparse(self.base_url).netloc
+        base_netloc = urlparse(self.base_url).netloc #extract domain name
 
-        for a in soup.find_all("a", href=True):
-            href = a["href"]
+        for link in soup.find_all("a", href=True):
+            href = link["href"]
 
-            if href.startswith("#"):
+            if href.startswith("#"): #we dont want to consider anchors
                 continue
-            absolute = urljoin(current_url, href)
-            absolute = absolute.split("#", 1)[0].rstrip("/")
-            if urlparse(absolute).netloc != base_netloc:
+            absolute = urljoin(current_url, href) #we add base url if relative
+            absolute = absolute.split("#", 1)[0].rstrip("/") #cleaning if necessary
+            if urlparse(absolute).netloc != base_netloc: #not absolute need in this case ( we stay on the same domain)
                 continue
 
             links.append(absolute)
@@ -183,11 +183,11 @@ class Crawler:
         Set of URLs that have already been visited.
     """
         if url in visited_set:
-            return
+            return #early exit because already visited
         if url in self.queue or url in self.priority_queue:
-            return
+            return #same
 
-        if "product" in url:
+        if "product/" in url:
             self.priority_queue.append(url)
         else:
             self.queue.append(url)
@@ -225,38 +225,38 @@ class Crawler:
         visited page.
     """
         parsed = urlparse(self.base_url)
-        robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
-        self.init_robot_parser(robots_url)
+        robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt" #we construct robots.txt url
+        self.init_robot_parser(robots_url) #initialize robot parser
         if start_url is None:
             start_url = self.base_url
 
         outputs = []
-        visited = set(self.already_visited)
+        visited = set(self.already_visited) #to avoid revisiting pages
 
         # init queue
         self.add_to_queue(start_url, visited)
 
-        while len(outputs) < max_pages:
+        while len(outputs) < max_pages: # crawl until we reach max pages
             current_url = self.pop_next_url()
             if current_url is None:
                 break  # nothing to visit
 
-            if current_url in visited:
+            if current_url in visited: # already visited
                 continue
             visited.add(current_url)
 
-            self.be_polite()
+            self.be_polite() #we respect the site
 
             soup = self.get_page_content(current_url)
-            if soup is None:
-                continue
+            if soup is None: 
+                return outputs 
 
             title = self.extract_title(soup)
             desc = self.extract_first_paragraph(soup)
             links = self.extract_links(soup, current_url)
 
             for link in links:
-                self.add_to_queue(link, visited)
+                self.add_to_queue(link, visited) # add new links to the good queue
 
             outputs.append({
                 "url": current_url,
