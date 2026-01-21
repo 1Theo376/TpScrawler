@@ -4,28 +4,32 @@ The only modification applied to the input data was the addition of **"italy"** 
 
 This change was introduced after testing a query containing the term *"italian"* and observing that it did not return the expected results. The issue was caused by the absence of a link between the country name and its adjectival form in the synonym dictionary. So I added the synonyms..
 
-## Document Filtering
+## Requirements
 
-Before ranking, documents are filtered in order to reduce the search space.
-A document is selected if **at least one query token** appears in one of the
-following fields:
+The project relies on the following Python packages:
 
-- title
-- description
-- brand
-- origin
+- nltk
+- jsonlines
+- beautifulsoup4
 
-This filtering strategy is intentionally permissive and aims to improve recall.
-For example, if a query refers to a product made in a specific country but no
-such product exists in the corpus, the system will still return other products
-sharing the same origin. The same reasoning applies to brand-based queries.
+Install all dependencies with:
+pip install -r requirements.txt
 
----
+
+## How to Run
+
+1. Make sure all required dependencies are installed
+
+2. Run the search engine:
+python TP3/websearcher.py
+
+The search engine loads the pre-built indexes from the TP3/input/ directory and
+saves the search results as JSON files in the TP3/output/ directory.
+
 
 ## Signals Used for Ranking
 
-The final relevance score of each document is computed using a **linear
-combination of multiple signals**:
+The final document score is a weighted sum of**:
 
 - BM25 score on the title
 - BM25 score on the description
@@ -76,15 +80,16 @@ the results produced by the example queries in `main.py`.
 
 ---
 
-## Analysis of Results
+## Results on different types of queries
 
 ### Filtered Documents
 
 For well-formed queries (i.e., containing tokens present in the corpus), the
 filtering stage typically selects between **10 and 50 documents** out of the
 approximately 150 documents in the corpus for the example queries provided in
-`websearcher.py`.
+`websearcher.py`. We co
 
+We evaluate the ranking by comparing the results obtained with different queries:
 
 ### One-Word Queries
 
@@ -92,9 +97,6 @@ BM25 is not a strong indicator for one-word queries. Since all filtered document
 contain the query term, the IDF value is close to zero, resulting in identical
 BM25 scores. In this case, the ranking mainly depends on the review-based score.
 
-### Queries with No Matching Documents
-
-If no document satisfies the filtering criteria, the system returns no results. ( just the metadata)
 
 ### Exact Phrase Queries
 
@@ -108,7 +110,13 @@ Documents corresponding to both the product and the brand or origin are ranked
 first (as we can see with "sneakers" and "italian sneakers" where the order changes), followed by documents matching only the product, and finally documents
 matching only the brand or origin.
 
-### Rare word
+### Particular case
+
+#### Queries with No Matching Documents
+
+If no document satisfies the filtering criteria, the system returns no results. ( just the metadata)
+
+#### Rare word
 
 In this search engine, rare words are mainly handled through the **IDF component**
 of the BM25 scoring function. Since the IDF value increases when a token appears
@@ -121,7 +129,7 @@ is not the case in the second scenario. This clearly illustrates the behavior
 described above.
 
 
-### Long query
+#### Long query
 
 Precise and well-specified queries benefit from multiple ranking signals and
 lead to a clear separation between relevant and less relevant documents.
@@ -136,26 +144,6 @@ lead to a clear separation between relevant and less relevant documents.
 - The website used in this project does not contain grammatical or spelling errors.
 In a real-world application, handling such errors would be necessary.
 
-## Requirements
 
-The project relies on the following Python packages:
-
-- nltk
-- jsonlines
-- beautifulsoup4
-
-Install all dependencies with:
-pip install -r requirements.txt
-
-
-## How to Run
-
-1. Make sure all required dependencies are installed
-
-2. Run the search engine:
-python TP3/websearcher.py
-
-The search engine loads the pre-built indexes from the TP3/input/ directory and
-saves the search results as JSON files in the TP3/output/ directory.
 
 
