@@ -1,5 +1,5 @@
 {
-  "web": {
+  "web-scraping.dev": {
     "https://web-scraping.dev/products": [
       0
     ],
@@ -71,331 +71,183 @@
     ],
     "https://web-scraping.dev/products?page=5": [
       0
-    ]
-  },
-  "scraping": {
-    "https://web-scraping.dev/products": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=apparel": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=1": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=2": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=3": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=4": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=5": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=consumables": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=1": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=2": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=3": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=4": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=5": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=household": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=household&page=1": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=household&page=2": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=household&page=3": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=household&page=4": [
-      1
-    ],
-    "https://web-scraping.dev/products?category=household&page=5": [
-      1
-    ],
-    "https://web-scraping.dev/products?page=1": [
-      1
-    ],
-    "https://web-scraping.dev/products?page=2": [
-      1
-    ],
-    "https://web-scraping.dev/products?page=3": [
-      1
-    ],
-    "https://web-scraping.dev/products?page=4": [
-      1
-    ],
-    "https://web-scraping.dev/products?page=5": [
-      1
-    ]
-  },
-  "dev": {
-    "https://web-scraping.dev/products": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=apparel": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=1": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=2": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=3": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=4": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=apparel&page=5": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=consumables": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=1": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=2": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=3": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=4": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=consumables&page=5": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=household": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=household&page=1": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=household&page=2": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=household&page=3": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=household&page=4": [
-      2
-    ],
-    "https://web-scraping.dev/products?category=household&page=5": [
-      2
-    ],
-    "https://web-scraping.dev/products?page=1": [
-      2
-    ],
-    "https://web-scraping.dev/products?page=2": [
-      2
-    ],
-    "https://web-scraping.dev/products?page=3": [
-      2
-    ],
-    "https://web-scraping.dev/products?page=4": [
-      2
-    ],
-    "https://web-scraping.dev/products?page=5": [
-      2
     ]
   },
   "product": {
     "https://web-scraping.dev/products": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=apparel": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=apparel&page=1": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=apparel&page=2": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=apparel&page=3": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=apparel&page=4": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=apparel&page=5": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=consumables": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=consumables&page=1": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=consumables&page=2": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=consumables&page=3": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=consumables&page=4": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=consumables&page=5": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=household": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=household&page=1": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=household&page=2": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=household&page=3": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=household&page=4": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?category=household&page=5": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?page=1": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?page=2": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?page=3": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?page=4": [
-      3
+      1
     ],
     "https://web-scraping.dev/products?page=5": [
-      3
+      1
     ]
   },
   "page": {
     "https://web-scraping.dev/products": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=apparel": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=apparel&page=1": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=apparel&page=2": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=apparel&page=3": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=apparel&page=4": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=apparel&page=5": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=consumables": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=consumables&page=1": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=consumables&page=2": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=consumables&page=3": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=consumables&page=4": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=consumables&page=5": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=household": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=household&page=1": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=household&page=2": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=household&page=3": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=household&page=4": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?category=household&page=5": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?page=1": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?page=2": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?page=3": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?page=4": [
-      4
+      2
     ],
     "https://web-scraping.dev/products?page=5": [
-      4
+      2
     ]
   },
   "1": {
     "https://web-scraping.dev/products": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=apparel": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=apparel&page=1": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=consumables": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=consumables&page=1": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=household": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=household&page=1": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?page=1": [
-      5
+      3
     ]
   },
-  "Box": {
+  "box": {
     "https://web-scraping.dev/product/1": [
       0
     ],
@@ -460,7 +312,7 @@
       0
     ]
   },
-  "Chocolate": {
+  "chocolate": {
     "https://web-scraping.dev/product/1": [
       2
     ],
@@ -525,7 +377,7 @@
       2
     ]
   },
-  "Candy": {
+  "candy": {
     "https://web-scraping.dev/product/1": [
       3
     ],
@@ -590,7 +442,7 @@
       3
     ]
   },
-  "Red": {
+  "red": {
     "https://web-scraping.dev/product/16": [
       0
     ],
@@ -646,7 +498,7 @@
       0
     ]
   },
-  "Energy": {
+  "energy": {
     "https://web-scraping.dev/product/16": [
       1
     ],
@@ -765,7 +617,7 @@
       1
     ]
   },
-  "Potion": {
+  "potion": {
     "https://web-scraping.dev/product/16": [
       2
     ],
@@ -884,7 +736,7 @@
       2
     ]
   },
-  "Kids": {
+  "kids'": {
     "https://web-scraping.dev/product/10": [
       0
     ],
@@ -916,7 +768,7 @@
       0
     ]
   },
-  "Light": {
+  "light-up": {
     "https://web-scraping.dev/product/10": [
       1
     ],
@@ -948,7 +800,7 @@
       1
     ]
   },
-  "Up": {
+  "sneakers": {
     "https://web-scraping.dev/product/10": [
       2
     ],
@@ -963,38 +815,6 @@
     ],
     "https://web-scraping.dev/product/10?variant=red-6": [
       2
-    ],
-    "https://web-scraping.dev/product/22": [
-      2
-    ],
-    "https://web-scraping.dev/product/22?variant=blue-5": [
-      2
-    ],
-    "https://web-scraping.dev/product/22?variant=blue-6": [
-      2
-    ],
-    "https://web-scraping.dev/product/22?variant=red-5": [
-      2
-    ],
-    "https://web-scraping.dev/product/22?variant=red-6": [
-      2
-    ]
-  },
-  "Sneakers": {
-    "https://web-scraping.dev/product/10": [
-      3
-    ],
-    "https://web-scraping.dev/product/10?variant=blue-5": [
-      3
-    ],
-    "https://web-scraping.dev/product/10?variant=blue-6": [
-      3
-    ],
-    "https://web-scraping.dev/product/10?variant=red-5": [
-      3
-    ],
-    "https://web-scraping.dev/product/10?variant=red-6": [
-      3
     ],
     "https://web-scraping.dev/product/11": [
       2
@@ -1018,19 +838,19 @@
       2
     ],
     "https://web-scraping.dev/product/22": [
-      3
+      2
     ],
     "https://web-scraping.dev/product/22?variant=blue-5": [
-      3
+      2
     ],
     "https://web-scraping.dev/product/22?variant=blue-6": [
-      3
+      2
     ],
     "https://web-scraping.dev/product/22?variant=red-5": [
-      3
+      2
     ],
     "https://web-scraping.dev/product/22?variant=red-6": [
-      3
+      2
     ],
     "https://web-scraping.dev/product/23": [
       2
@@ -1054,7 +874,7 @@
       2
     ]
   },
-  "Classic": {
+  "classic": {
     "https://web-scraping.dev/product/11": [
       0
     ],
@@ -1098,7 +918,7 @@
       0
     ]
   },
-  "Leather": {
+  "leather": {
     "https://web-scraping.dev/product/11": [
       1
     ],
@@ -1142,7 +962,7 @@
       1
     ]
   },
-  "Cat": {
+  "cat-ear": {
     "https://web-scraping.dev/product/12": [
       0
     ],
@@ -1198,7 +1018,7 @@
       0
     ]
   },
-  "Ear": {
+  "beanie": {
     "https://web-scraping.dev/product/12": [
       1
     ],
@@ -1254,63 +1074,7 @@
       1
     ]
   },
-  "Beanie": {
-    "https://web-scraping.dev/product/12": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=darkgrey-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=darkgrey-small": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=grey-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=grey-small": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=pink-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=pink-small": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=sand-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/12?variant=sand-small": [
-      2
-    ],
-    "https://web-scraping.dev/product/24": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=darkgrey-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=darkgrey-small": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=grey-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=grey-small": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=pink-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=pink-small": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=sand-medium": [
-      2
-    ],
-    "https://web-scraping.dev/product/24?variant=sand-small": [
-      2
-    ]
-  },
-  "Dark": {
+  "dark": {
     "https://web-scraping.dev/product/14": [
       0
     ],
@@ -1339,7 +1103,7 @@
       0
     ]
   },
-  "Teal": {
+  "teal": {
     "https://web-scraping.dev/product/15": [
       0
     ],
@@ -1368,7 +1132,7 @@
       0
     ]
   },
-  "Blue": {
+  "blue": {
     "https://web-scraping.dev/product/17": [
       0
     ],
@@ -1388,7 +1152,7 @@
       0
     ]
   },
-  "Dragon": {
+  "dragon": {
     "https://web-scraping.dev/product/18": [
       0
     ],
@@ -1408,7 +1172,7 @@
       0
     ]
   },
-  "Hiking": {
+  "hiking": {
     "https://web-scraping.dev/product/19": [
       0
     ],
@@ -1440,7 +1204,7 @@
       0
     ]
   },
-  "Boots": {
+  "boots": {
     "https://web-scraping.dev/product/19": [
       1
     ],
@@ -1472,7 +1236,7 @@
       1
     ]
   },
-  "Outdoor": {
+  "outdoor": {
     "https://web-scraping.dev/product/19": [
       3
     ],
@@ -1504,7 +1268,7 @@
       3
     ]
   },
-  "Adventures": {
+  "adventures": {
     "https://web-scraping.dev/product/19": [
       4
     ],
@@ -1536,7 +1300,7 @@
       4
     ]
   },
-  "Women": {
+  "women's": {
     "https://web-scraping.dev/product/20": [
       0
     ],
@@ -1568,7 +1332,39 @@
       0
     ]
   },
-  "High": {
+  "high": {
+    "https://web-scraping.dev/product/20": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-6": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-7": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=beige-8": [
+      1
+    ],
+    "https://web-scraping.dev/product/20?variant=blue-9": [
+      1
+    ],
+    "https://web-scraping.dev/product/8": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-6": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-7": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=beige-8": [
+      1
+    ],
+    "https://web-scraping.dev/product/8?variant=blue-9": [
+      1
+    ]
+  },
+  "heel": {
     "https://web-scraping.dev/product/20": [
       2
     ],
@@ -1600,7 +1396,7 @@
       2
     ]
   },
-  "Heel": {
+  "sandals": {
     "https://web-scraping.dev/product/20": [
       3
     ],
@@ -1632,39 +1428,7 @@
       3
     ]
   },
-  "Sandals": {
-    "https://web-scraping.dev/product/20": [
-      4
-    ],
-    "https://web-scraping.dev/product/20?variant=beige-6": [
-      4
-    ],
-    "https://web-scraping.dev/product/20?variant=beige-7": [
-      4
-    ],
-    "https://web-scraping.dev/product/20?variant=beige-8": [
-      4
-    ],
-    "https://web-scraping.dev/product/20?variant=blue-9": [
-      4
-    ],
-    "https://web-scraping.dev/product/8": [
-      4
-    ],
-    "https://web-scraping.dev/product/8?variant=beige-6": [
-      4
-    ],
-    "https://web-scraping.dev/product/8?variant=beige-7": [
-      4
-    ],
-    "https://web-scraping.dev/product/8?variant=beige-8": [
-      4
-    ],
-    "https://web-scraping.dev/product/8?variant=blue-9": [
-      4
-    ]
-  },
-  "Running": {
+  "running": {
     "https://web-scraping.dev/product/21": [
       0
     ],
@@ -1696,7 +1460,7 @@
       0
     ]
   },
-  "Shoes": {
+  "shoes": {
     "https://web-scraping.dev/product/21": [
       1
     ],
@@ -1728,7 +1492,7 @@
       1
     ]
   },
-  "Men": {
+  "men": {
     "https://web-scraping.dev/product/21": [
       3
     ],
@@ -1762,58 +1526,58 @@
   },
   "2": {
     "https://web-scraping.dev/products?category=apparel&page=2": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=consumables&page=2": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=household&page=2": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?page=2": [
-      5
+      3
     ]
   },
   "3": {
     "https://web-scraping.dev/products?category=apparel&page=3": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=consumables&page=3": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=household&page=3": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?page=3": [
-      5
+      3
     ]
   },
   "4": {
     "https://web-scraping.dev/products?category=apparel&page=4": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=consumables&page=4": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=household&page=4": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?page=4": [
-      5
+      3
     ]
   },
   "5": {
     "https://web-scraping.dev/products?category=apparel&page=5": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=consumables&page=5": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?category=household&page=5": [
-      5
+      3
     ],
     "https://web-scraping.dev/products?page=5": [
-      5
+      3
     ]
   }
 }

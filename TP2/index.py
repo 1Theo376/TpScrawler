@@ -9,8 +9,39 @@ from pathlib import Path
 
 class Index:
     def __init__(self):
-        pass
+        nltk.download('stopwords')
+        self.stop_words = set(stopwords.words('english'))
     
+    def tokenize(self, text):
+        """
+        Parameter
+        ---------
+        text: String
+            The original text to tokenize
+        
+        Return
+        ------
+        List[String]
+            the tokenized version of the text
+        """
+        return text.lower().split()
+    
+    def normalize(self, tokens):
+        """
+        Parameter
+        ---------
+        tokens: List[String]
+            The original tokens to normalize
+        """
+        tokenizer = RegexpTokenizer(r"[A-Za-z0-9]+")
+        tokens_normalized = []
+        for token in tokens:
+            words = tokenizer.tokenize(token)
+            for word in words:
+                if word not in self.stop_words:
+                    tokens_normalized.append(word)
+        return tokens_normalized
+
     def read_file(self,file):
         """
     Read a JSONL file and load its content into memory.
@@ -46,16 +77,15 @@ class Index:
         Inverted index mapping tokens to lists of document URLs.
     """
         L=self.read_file(file)
-        stop_words = set(stopwords.words('english'))
         index={}
-        tokenizer = RegexpTokenizer(r"[A-Za-z0-9]+")
-        for o in L:
-            words=tokenizer.tokenize(o['description'].lower())
+        for o in L: #objects in the list
+            words=self.tokenize(o['description'])
+            words=self.normalize(words)
             for w in words:
-                if w not in index and w not in stop_words:
+                if w not in index:
                     index[w]=set()
                     index[w].add((o['url']))
-                elif w in index and w not in stop_words:
+                elif w in index:
                     index[w].add((o['url']))
         for k in index:
             index[k]=list(index[k])
@@ -76,16 +106,15 @@ class Index:
         Inverted index mapping tokens to lists of document URLs.
     """
         L=self.read_file(file)
-        stop_words = set(stopwords.words('english'))
         index={}
-        tokenizer = RegexpTokenizer(r"[A-Za-z0-9]+")
         for o in L:
-            words=tokenizer.tokenize(o['title'].lower())
+            words=self.tokenize(o['title'].lower())
+            words=self.normalize(words)
             for w in words:
-                if w not in index and w not in stop_words:
+                if w not in index:
                     index[w]=set()
                     index[w].add((o['url']))
-                elif w in index and w not in stop_words:
+                elif w in index:
                     index[w].add((o['url']))
         for k in index:
             index[k]=list(index[k])
@@ -150,38 +179,38 @@ class Index:
         Dictionary mapping each feature name to its corresponding inverted index.
         Each inverted index maps tokens to sorted lists of product identifiers.
     """
-        if features_to_keep is None:
-            features_to_keep = []
+        L = self.read_file(file)
+        feature_indexes = {feat: {} for feat in features_to_keep}
 
-        L=self.read_file(file)
-        stop_words = set(stopwords.words('english'))
-        tokenizer = RegexpTokenizer(r"[A-Za-z0-9]+")
-        indexes = {feat: {} for feat in features_to_keep}
-        for o in L:
-            feats = o.get("product_features", {}) or {}
-            doc_id = o.get("id_product", "No id")
-
-            if doc_id == "No id":
+        for obj in L:
+            url = obj.get("url")
+            if not url:
                 continue
+
+            feats = obj.get("product_features", {}) or {}
 
             for feat_name in features_to_keep:
                 if feat_name not in feats:
                     continue
 
-                text = str(feats[feat_name]).lower()
-                for tok in tokenizer.tokenize(text):
-                    if tok in stop_words:
-                        continue
+                # Feature value can be string, number, list... -> stringify
+                value = feats[feat_name]
+                if isinstance(value, list):
+                    text = " ".join(str(x) for x in value)
+                else:
+                    text = str(value)
 
-                    if tok not in indexes[feat_name]:
-                        indexes[feat_name][tok] = set()
-                    indexes[feat_name][tok].add(doc_id)
+                tokens = self.normalize(self.tokenize(text))
 
-        for feat_name in indexes:
-            for tok in list(indexes[feat_name].keys()):
-                indexes[feat_name][tok] = sorted(list(indexes[feat_name][tok]))
+                for tok in tokens:
+                    feature_indexes[feat_name].setdefault(tok, set()).add(url)
 
-        return indexes
+        # Convert sets to sorted lists for JSON compatibility and stable output
+        for feat_name in feature_indexes:
+            for tok in list(feature_indexes[feat_name].keys()):
+                feature_indexes[feat_name][tok] = sorted(feature_indexes[feat_name][tok])
+
+        return feature_indexes
     
     def create_position_index_description(self, file):
         """
@@ -199,19 +228,15 @@ class Index:
         token -> {document_url: [positions]}.
     """
         L = self.read_file(file)
-        stop_words = set(stopwords.words('english'))
-        tokenizer = RegexpTokenizer(r"[A-Za-z0-9]+")
 
         pos_index = {} 
 
         for o in L:
             url = o["url"]
-            words = tokenizer.tokenize((o.get("description") or "").lower())
-
+            words = self.tokenize((o.get("description") or "").lower())
+            words = self.normalize(words)
             position = 0
             for w in words:
-                if w in stop_words:
-                    continue
 
                 if w not in pos_index:
                     pos_index[w] = {}
@@ -239,17 +264,15 @@ class Index:
         token -> {document_url: [positions]}.
     """
         L = self.read_file(file)
-        stop_words = set(stopwords.words("english"))
-        tokenizer = RegexpTokenizer(r"[A-Za-z0-9]+")
         pos_index = {}
 
         for o in L:
             url = o["url"]
-            tokens = tokenizer.tokenize(o.get(field_name, ""))
+            tokens = self.tokenize(o.get(field_name, ""))
 
             pos = 0
             for tok in tokens:
-                if tok in stop_words:
+                if tok in self.stop_words:
                     pos += 1
                     continue
                 pos_index.setdefault(tok, {}).setdefault(url, []).append(pos)
@@ -280,8 +303,6 @@ index_rewiews = index.create_index_reviews("/home/ensai/Documents/Indexation/TpS
 print("Index reviews créé:", index_rewiews)
 
 if __name__ == "__main__":
-    nltk.download('stopwords')
-    nltk.download('punkt')
 
     input_file = "/home/ensai/Documents/Indexation/TpScrawler/TP2/input/products_with_id.jsonl"
     output_dir = "/home/ensai/Documents/Indexation/TpScrawler/TP2/output"
@@ -296,9 +317,9 @@ if __name__ == "__main__":
     index_reviews = index.create_index_reviews(input_file)
 
     # Features inverted index
-    index_features = index.create_inverted_index_features(
+    feature_indexes = index.create_inverted_index_features(
         input_file,
-        features_to_keep=["brand", "material", "size"]
+        features_to_keep=["brand", "origin", "material", "size"]
     )
 
     # Positional indexes
@@ -309,8 +330,12 @@ if __name__ == "__main__":
     index.save_index(index_title, f"{output_dir}/inverted_title.json")
     index.save_index(index_desc, f"{output_dir}/inverted_description.json")
     index.save_index(index_reviews, f"{output_dir}/reviews.json")
-    index.save_index(index_features, f"{output_dir}/features.json")
     index.save_index(pos_index_title, f"{output_dir}/positional_title.json")
     index.save_index(pos_index_desc, f"{output_dir}/positional_description.json")
+
+    index.save_index(feature_indexes["brand"], f"{output_dir}/brand_index.json")
+    index.save_index(feature_indexes["origin"], f"{output_dir}/origin_index.json")
+    index.save_index(feature_indexes["material"], f"{output_dir}/material_index.json")
+    index.save_index(feature_indexes["size"], f"{output_dir}/size_index.json")
 
         
