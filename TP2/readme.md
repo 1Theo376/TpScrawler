@@ -1,7 +1,6 @@
-# Web Indexing – TP2
-
 This project implements several indexing structures from a web crawl of product
 pages. The input data is obtained from "https://github.com/PeriLara/TP_ENSAI/tree/main/TP2/input".
+Then, we modify this input and we obtain the same with the product ids.
 
 ## Index Structure
 
@@ -88,11 +87,8 @@ Structure:
   separate preprocessing script.
 - An object-oriented approach is used: all indexing logic is implemented in a
   single `Index` class.
-- Tokenization is performed using space-based tokenization after punctuation
-  removal.
 - Stopwords are removed using the NLTK stopwords corpus.
-- Positional indexes for title and description are butilt separetly (and not in the first method)
-  parameterized by the field name.
+- Positional indexes for title and description are built separetly of the corresponding inverted_index(and not in the first method)
 - Feature indexing is generic and allows adding new features easily.
 - Each index is saved in a separate JSON file.
 
