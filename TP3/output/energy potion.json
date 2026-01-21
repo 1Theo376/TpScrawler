@@ -70,12 +70,12 @@
       "title": "Dragon Energy Potion - One",
       "description": "Fuel your gaming prowess with our 'dragon potion', an energy drink for those who dare to take on the greatest challenges. Packed with a fiery tropical flavor and a potent energy blend, this potion sets the stage for epic gaming sessions"
     },
-    "https://web-scraping.dev/product/15?variant=one": {
+    "https://web-scraping.dev/product/27?variant=one": {
       "rank": 22.769029762386058,
       "title": "Teal Energy Potion - One",
       "description": "With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community"
     },
-    "https://web-scraping.dev/product/27?variant=one": {
+    "https://web-scraping.dev/product/15?variant=one": {
       "rank": 22.769029762386058,
       "title": "Teal Energy Potion - One",
       "description": "With its intriguing teal color and a flavor that keeps you asking for more, this potion is your best companion during those long gaming nights. Experience a surge of vitality with our 'teal potion', an exceptional energy drink designed for the gaming community"
@@ -109,8 +109,8 @@
       "potion"
     ],
     "expanded_tokens": [
-      "potion",
-      "energy"
+      "energy",
+      "potion"
     ],
     "mode": "OR"
   }

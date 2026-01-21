@@ -136,3 +136,26 @@ lead to a clear separation between relevant and less relevant documents.
 - The website used in this project does not contain grammatical or spelling errors.
 In a real-world application, handling such errors would be necessary.
 
+## Requirements
+
+The project relies on the following Python packages:
+
+- nltk
+- jsonlines
+- beautifulsoup4
+
+Install all dependencies with:
+pip install -r requirements.txt
+
+
+## How to Run
+
+1. Make sure all required dependencies are installed
+
+2. Run the search engine:
+python TP3/websearcher.py
+
+The search engine loads the pre-built indexes from the TP3/input/ directory and
+saves the search results as JSON files in the TP3/output/ directory.
+
+

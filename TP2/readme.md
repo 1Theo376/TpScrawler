@@ -96,17 +96,28 @@ Structure:
 - Feature indexing is generic and allows adding new features easily.
 - Each index is saved in a separate JSON file.
 
+## Requirements
+
+The project relies on the following Python packages:
+
+- nltk
+- jsonlines
+- beautifulsoup4
+
+Install all dependencies with:
+pip install -r requirements.txt
+
 ## How to Run
 
 
 1. Preprocess the crawled data:
 ```bash
-python pre-traitement.py
+python TP2/pre-traitement.py
 ```
 
 2. Build the indexes (TP2):
 ```bash
-python index.py
+python TP2/index.py
 ```
 
 All generated indexes are saved in the `TP2/output/` directory.
