@@ -1,0 +1,70 @@
+{
+  "search_result": {
+    "https://web-scraping.dev/product/23?variant=white41": {
+      "rank": 4.998384064523885,
+      "title": "Classic Leather Sneakers - White41",
+      "description": "The sleek design and neutral color make them versatile for any occasion. Made from premium genuine leather, these sneakers offer both comfort and durability. Step out in style with these timeless classic leather sneakers"
+    },
+    "https://web-scraping.dev/product/23?variant=white42": {
+      "rank": 4.998384064523885,
+      "title": "Classic Leather Sneakers - White42",
+      "description": "Step out in style with these timeless classic leather sneakers. The sleek design and neutral color make them versatile for any occasion. Made from premium genuine leather, these sneakers offer both comfort and durability"
+    },
+    "https://web-scraping.dev/product/23?variant=white40": {
+      "rank": 4.998384064523885,
+      "title": "Classic Leather Sneakers - White40",
+      "description": "The sleek design and neutral color make them versatile for any occasion. Step out in style with these timeless classic leather sneakers. Made from premium genuine leather, these sneakers offer both comfort and durability"
+    },
+    "https://web-scraping.dev/product/11?variant=white40": {
+      "rank": 4.998384064523885,
+      "title": "Classic Leather Sneakers - White40",
+      "description": "The sleek design and neutral color make them versatile for any occasion. Step out in style with these timeless classic leather sneakers. Made from premium genuine leather, these sneakers offer both comfort and durability"
+    },
+    "https://web-scraping.dev/product/11?variant=white42": {
+      "rank": 4.998384064523885,
+      "title": "Classic Leather Sneakers - White42",
+      "description": "Made from premium genuine leather, these sneakers offer both comfort and durability. The sleek design and neutral color make them versatile for any occasion. Step out in style with these timeless classic leather sneakers"
+    },
+    "https://web-scraping.dev/product/23?variant=black42": {
+      "rank": 4.862653020767764,
+      "title": "Classic Leather Sneakers - Black42",
+      "description": "The sleek design and neutral color make them versatile for any occasion. Whether you're dressing up for a formal event or going for a casual outing, these sneakers will complement your look perfectly. Step out in style with these timeless classic leather sneakers"
+    },
+    "https://web-scraping.dev/product/11?variant=white41": {
+      "rank": 4.862653020767764,
+      "title": "Classic Leather Sneakers - White41",
+      "description": "Step out in style with these timeless classic leather sneakers. Whether you're dressing up for a formal event or going for a casual outing, these sneakers will complement your look perfectly. The sleek design and neutral color make them versatile for any occasion"
+    },
+    "https://web-scraping.dev/product/11?variant=black42": {
+      "rank": 4.778792644014288,
+      "title": "Classic Leather Sneakers - Black42",
+      "description": "Made from premium genuine leather, these sneakers offer both comfort and durability. The sleek design and neutral color make them versatile for any occasion. Whether you're dressing up for a formal event or going for a casual outing, these sneakers will complement your look perfectly"
+    },
+    "https://web-scraping.dev/product/23?variant=black41": {
+      "rank": 4.778792644014288,
+      "title": "Classic Leather Sneakers - Black41",
+      "description": "The sleek design and neutral color make them versatile for any occasion. Whether you're dressing up for a formal event or going for a casual outing, these sneakers will complement your look perfectly. Made from premium genuine leather, these sneakers offer both comfort and durability"
+    },
+    "https://web-scraping.dev/product/11?variant=black41": {
+      "rank": 4.778792644014288,
+      "title": "Classic Leather Sneakers - Black41",
+      "description": "Made from premium genuine leather, these sneakers offer both comfort and durability. Whether you're dressing up for a formal event or going for a casual outing, these sneakers will complement your look perfectly. The sleek design and neutral color make them versatile for any occasion"
+    },
+    "https://web-scraping.dev/product/11?variant=black40": {
+      "rank": 4.778792644014288,
+      "title": "Classic Leather Sneakers - Black40",
+      "description": "Whether you're dressing up for a formal event or going for a casual outing, these sneakers will complement your look perfectly. Made from premium genuine leather, these sneakers offer both comfort and durability. The sleek design and neutral color make them versatile for any occasion"
+    }
+  },
+  "metadata": {
+    "number_of_documents": 156,
+    "number_of_filtered_documents": 11,
+    "tokens": [
+      "versatile"
+    ],
+    "expanded_tokens": [
+      "versatile"
+    ],
+    "mode": "OR"
+  }
+}

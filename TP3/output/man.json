@@ -1,0 +1,14 @@
+{
+  "search_result": {},
+  "metadata": {
+    "number_of_documents": 156,
+    "number_of_filtered_documents": 0,
+    "tokens": [
+      "man"
+    ],
+    "expanded_tokens": [
+      "man"
+    ],
+    "mode": "OR"
+  }
+}
