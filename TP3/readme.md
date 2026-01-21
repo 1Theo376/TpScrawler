@@ -59,7 +59,7 @@ the results produced by the example queries in `main.py`.
   Less important than an exact match in the title, but still helpful to
   distinguish documents.
 
-- **All tokens in the description = 0.5**  
+- **All tokens in the description = 2**  
   This signal may occur frequently depending on the query; therefore, its weight
   is kept low to avoid excessive boosting.
 
